@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="JhG-iN-Wgl">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Picker3 View Controller-->
+        <scene sceneID="RGm-vb-RHA">
+            <objects>
+                <viewController id="JhG-iN-Wgl" customClass="Picker3ViewController" customModule="SeleccionFecha" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Avm-Oc-jjN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0sa-E8-TAt">
+                                <rect key="frame" x="0.0" y="44" width="414" height="216"/>
+                            </pickerView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="NXO-uB-crN">
+                                <rect key="frame" x="20" y="247" width="374" height="20.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vNU-Fd-7Yz">
+                                        <rect key="frame" x="0.0" y="0.0" width="182" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Año" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PWE-5q-Drm">
+                                        <rect key="frame" x="192" y="0.0" width="182" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xoZ-fM-zcY">
+                                <rect key="frame" x="20" y="44" width="374" height="30"/>
+                                <state key="normal" title="Cerrar"/>
+                                <connections>
+                                    <action selector="cerrarAction:" destination="JhG-iN-Wgl" eventType="touchUpInside" id="WPv-2I-wlv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e3Y-us-qET">
+                                <rect key="frame" x="20" y="316" width="374" height="30"/>
+                                <state key="normal" title="Picker 4"/>
+                                <connections>
+                                    <segue destination="al5-FN-2XX" kind="presentation" modalPresentationStyle="fullScreen" id="ppj-yv-yGZ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="aNY-94-uUy" firstAttribute="trailing" secondItem="NXO-uB-crN" secondAttribute="trailing" constant="20" id="3td-Ra-7DL"/>
+                            <constraint firstItem="0sa-E8-TAt" firstAttribute="leading" secondItem="aNY-94-uUy" secondAttribute="leading" id="9ye-09-wF9"/>
+                            <constraint firstItem="e3Y-us-qET" firstAttribute="leading" secondItem="aNY-94-uUy" secondAttribute="leading" constant="20" id="CZa-Zq-bPi"/>
+                            <constraint firstItem="0sa-E8-TAt" firstAttribute="top" secondItem="aNY-94-uUy" secondAttribute="top" id="LuS-vF-3wD"/>
+                            <constraint firstItem="NXO-uB-crN" firstAttribute="top" secondItem="Avm-Oc-jjN" secondAttribute="topMargin" constant="203" id="N79-NH-idO"/>
+                            <constraint firstItem="aNY-94-uUy" firstAttribute="trailing" secondItem="xoZ-fM-zcY" secondAttribute="trailing" constant="20" id="WOj-Da-vdK"/>
+                            <constraint firstItem="NXO-uB-crN" firstAttribute="leading" secondItem="aNY-94-uUy" secondAttribute="leading" constant="20" id="duD-in-Vf6"/>
+                            <constraint firstItem="0sa-E8-TAt" firstAttribute="trailing" secondItem="aNY-94-uUy" secondAttribute="trailing" id="fti-FO-HVV"/>
+                            <constraint firstItem="aNY-94-uUy" firstAttribute="trailing" secondItem="e3Y-us-qET" secondAttribute="trailing" constant="20" id="rtY-ry-S1j"/>
+                            <constraint firstItem="xoZ-fM-zcY" firstAttribute="top" secondItem="aNY-94-uUy" secondAttribute="top" id="sEf-nH-eOA"/>
+                            <constraint firstItem="e3Y-us-qET" firstAttribute="top" secondItem="NXO-uB-crN" secondAttribute="bottom" constant="48.5" id="t0C-wr-boq"/>
+                            <constraint firstItem="xoZ-fM-zcY" firstAttribute="leading" secondItem="aNY-94-uUy" secondAttribute="leading" constant="20" id="yC1-o9-Aip"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="aNY-94-uUy"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="OeX-ds-iXl"/>
+                    <connections>
+                        <outlet property="anio" destination="PWE-5q-Drm" id="6PY-31-5V7"/>
+                        <outlet property="mes" destination="vNU-Fd-7Yz" id="gos-fD-beP"/>
+                        <outlet property="pickercredito" destination="0sa-E8-TAt" id="IXj-Nf-OI5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4fY-Q5-7B9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2057" y="138"/>
+        </scene>
+        <!--Picker4-->
+        <scene sceneID="A1O-4g-8Zi">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Picker4" id="al5-FN-2XX" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8sA-gD-4Rw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2790" y="138"/>
+        </scene>
+    </scenes>
+</document>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SeleccionFecha" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Selecciona una fecha" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bJl-tA-J2y">
+                                <rect key="frame" x="20" y="44" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Selecciona un estado" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qnT-hC-j4g">
+                                <rect key="frame" x="20" y="103" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fVx-vl-xAp">
+                                <rect key="frame" x="20" y="187" width="374" height="30"/>
+                                <state key="normal" title="Pagina 2"/>
+                                <connections>
+                                    <segue destination="llO-4w-SVy" kind="presentation" modalPresentationStyle="fullScreen" id="jgg-v8-MM2"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="qnT-hC-j4g" firstAttribute="top" secondItem="bJl-tA-J2y" secondAttribute="bottom" constant="25" id="A20-Yv-k70"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fVx-vl-xAp" secondAttribute="trailing" constant="20" id="AaJ-Vn-90W"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qnT-hC-j4g" secondAttribute="trailing" constant="20" id="BWV-sP-0eJ"/>
+                            <constraint firstItem="fVx-vl-xAp" firstAttribute="top" secondItem="qnT-hC-j4g" secondAttribute="bottom" constant="50" id="MzP-FW-jgR"/>
+                            <constraint firstItem="bJl-tA-J2y" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="bWX-cl-Vs1"/>
+                            <constraint firstItem="bJl-tA-J2y" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="dvT-ik-9lh"/>
+                            <constraint firstItem="qnT-hC-j4g" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="pPU-wB-LYc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bJl-tA-J2y" secondAttribute="trailing" constant="20" id="wRn-AY-erA"/>
+                            <constraint firstItem="fVx-vl-xAp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="ye2-8c-Xj8"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="estadoEditText" destination="qnT-hC-j4g" id="jUY-eD-Xq2"/>
+                        <outlet property="fechaEditText" destination="bJl-tA-J2y" id="UFO-ws-KJs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
+        </scene>
+        <!--Picker2 View Controller-->
+        <scene sceneID="Clu-EM-u9g">
+            <objects>
+                <viewController id="llO-4w-SVy" customClass="Picker2ViewController" customModule="SeleccionFecha" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JFg-rq-DgQ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="4mn-0K-dDi"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ep3-7T-CB5"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FJp-uz-bHZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1112" y="138"/>
+        </scene>
+    </scenes>
+</document>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="llO-4w-SVy">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Picker2 View Controller-->
+        <scene sceneID="Clu-EM-u9g">
+            <objects>
+                <viewController id="llO-4w-SVy" customClass="Picker2ViewController" customModule="SeleccionFecha" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JFg-rq-DgQ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ajG-k8-b9D">
+                                <rect key="frame" x="0.0" y="44" width="414" height="216"/>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Selecciona estado y ciudad" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JoS-aj-bIb">
+                                <rect key="frame" x="57" y="270" width="300" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="8X2-m1-tlL"/>
+                                    <constraint firstAttribute="height" constant="60" id="N4n-kH-Tvf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YGq-4U-Xsk">
+                                <rect key="frame" x="20" y="378" width="374" height="30"/>
+                                <state key="normal" title="Ventana 3"/>
+                                <connections>
+                                    <segue destination="Bgs-aB-Umr" kind="presentation" modalPresentationStyle="fullScreen" id="Feb-g7-3vk"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Sg-9E-oQ1">
+                                <rect key="frame" x="26" y="44" width="44" height="30"/>
+                                <state key="normal" title="Cerrar"/>
+                                <connections>
+                                    <action selector="cerrarAction:" destination="llO-4w-SVy" eventType="touchUpInside" id="fAN-vi-thK"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="ajG-k8-b9D" firstAttribute="leading" secondItem="4mn-0K-dDi" secondAttribute="leading" id="Kp8-QR-Deo"/>
+                            <constraint firstItem="JoS-aj-bIb" firstAttribute="centerX" secondItem="JFg-rq-DgQ" secondAttribute="centerX" id="Rsj-t3-mcU"/>
+                            <constraint firstItem="8Sg-9E-oQ1" firstAttribute="leading" secondItem="4mn-0K-dDi" secondAttribute="leading" constant="26" id="VZd-vW-9w2"/>
+                            <constraint firstItem="ajG-k8-b9D" firstAttribute="trailing" secondItem="4mn-0K-dDi" secondAttribute="trailing" id="W0t-uA-3dn"/>
+                            <constraint firstItem="YGq-4U-Xsk" firstAttribute="leading" secondItem="4mn-0K-dDi" secondAttribute="leading" constant="20" id="XGj-I4-Rrk"/>
+                            <constraint firstItem="8Sg-9E-oQ1" firstAttribute="top" secondItem="4mn-0K-dDi" secondAttribute="top" id="Z7r-ix-hvC"/>
+                            <constraint firstItem="4mn-0K-dDi" firstAttribute="trailing" secondItem="YGq-4U-Xsk" secondAttribute="trailing" constant="20" id="hul-k7-kyc"/>
+                            <constraint firstItem="JoS-aj-bIb" firstAttribute="top" secondItem="ajG-k8-b9D" secondAttribute="bottom" constant="10" id="vTE-4x-Sy2"/>
+                            <constraint firstItem="ajG-k8-b9D" firstAttribute="top" secondItem="4mn-0K-dDi" secondAttribute="top" id="yEI-ud-HCO"/>
+                            <constraint firstItem="YGq-4U-Xsk" firstAttribute="top" secondItem="JoS-aj-bIb" secondAttribute="bottom" constant="48" id="zBe-wh-lL7"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="4mn-0K-dDi"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ep3-7T-CB5"/>
+                    <connections>
+                        <outlet property="estadoCiudadPicker" destination="ajG-k8-b9D" id="7Pn-hX-XHQ"/>
+                        <outlet property="respuestaLabel" destination="JoS-aj-bIb" id="sQv-NU-Z5o"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FJp-uz-bHZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1112" y="138"/>
+        </scene>
+        <!--Picker3-->
+        <scene sceneID="R4m-VK-Yw3">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Picker3" id="Bgs-aB-Umr" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fsg-UU-MHb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2057" y="138"/>
+        </scene>
+    </scenes>
+</document>
